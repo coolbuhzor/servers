@@ -4,12 +4,18 @@ import morgan from "morgan";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
+import routes from "./routes/api/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 8081;
 
 const dataFilePath = path.join(__dirname, "data.json");
+
+// mvc
+// models
+// views
+// controllers
 
 app.use(morgan("combined"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,6 +50,8 @@ app.get("/", (req, res) => {
   const posts = readPosts();
   res.render("ejs/index", { posts });
 });
+
+app.use("/api/v1", routes);
 
 app.get("/about", (req, res) => {
   res.sendFile(__dirname + "/views/about.html");
