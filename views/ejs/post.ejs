@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title><%= post.title %></title>
+  </head>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/css/index.css" />
+      <title><%= post.title %></title>
+    </head>
+    <body>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+      </nav>
+      <div class="post-container">
+        <h1><%= post.title %></h1>
+        <p><%= post.content %></p>
+        <a href="/">Back to posts</a>
+        <a href="/update-post/<%= post.id %>">Update Post</a>
+      </div>
+    </body>
+  </html>
+</html>

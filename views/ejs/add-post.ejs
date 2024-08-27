@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+    <h3>Add New posts</h3>
+    <form action="/post" method="post">
+      <div>
+        <label for="title">title</label><br />
+        <input type="text" name="title" />
+      </div>
+      <div>
+        <label for="content">Content</label><br />
+        <textarea cols="30" rows="4" name="content"></textarea>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
