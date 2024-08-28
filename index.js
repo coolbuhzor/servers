@@ -5,6 +5,10 @@ import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
 import routes from "./routes/api/index.js";
+import { FileStorage } from "./models/fileStorage/index.js";
+
+export const db = new FileStorage();
+db.starter();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();

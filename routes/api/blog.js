@@ -1,13 +1,8 @@
 import express from "express";
-import { sendResponse } from "../../utils/index.js";
+import { addBlog, getBlog } from "../../controllers/blogController.js";
 const router = express.Router();
 
-router
-  .route("/")
-  .get((req, res) => {
-    sendResponse(res, 200, "Blogs fetched successfully", []);
-  })
-//   .post();
+router.route("/").get(getBlog).post(addBlog);
 
 // router.use("/:id").put().get().delete();
 
